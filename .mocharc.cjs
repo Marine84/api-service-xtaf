@@ -15,37 +15,12 @@ module.exports = {
     //     reportFilename: "poxos",
     //     reportDir: "./"
     // },
-    reporter: "@reportportal/client-javascript",
-    reporterOptions:{
-        endpoint: 'https://reportportal.epam.com/api/v1',
-            token: 'c7bdd766-82fb-4930-b755-65df6024e0cd',
-            launch: 'marine_yegoryan_TEST_EXAMPLE',
-            project: 'marine_yegoryan_personal',
-            description: 'PROJECT_DESCRIPTION',
-    },
-    // reporter: "mocha-multi-reporters",
-    // reporterOptions: {
-    //     reporterEnabled: '@reportportal/client-javascript, mochawesome',
 
-        // reportFilename: "test",
-        //     reportDir: "./"
-        // reportPortalReporterOptions: {
-        //     endpoint: 'https://reportportal.epam.com/api/v1',
-        //     token: 'c7bdd766-82fb-4930-b755-65df6024e0cd',
-        //     launch: 'marine_yegoryan_TEST_EXAMPLE',
-        //     project: 'marine_yegoryan_personal',
-        //     description: 'PROJECT_DESCRIPTION',
-        // },
+    reporter: "mocha-multi-reporters",
+    'reporter-options': 'configFile=report.config.json',
+    // 'report-options': {
+    //     reporterOption: "configFile=report.config.json"
     // },
-    // 'reporter-option': {
-    //     reporterEnabled: '@reportportal/client-javascript, mochawesome',
-    //     endpoint: 'https://reportportal.epam.com/api/v1',
-    //     token: 'c7bdd766-82fb-4930-b755-65df6024e0cd',
-    //     launch: 'Test',
-    //     project: 'Test_Project',
-    //     description: 'PROJECT_DESCRIPTION',
-    // },
-
     package: './package.json',
 
     spec: ['specs/*.spec.ts'], // the positional arguments!

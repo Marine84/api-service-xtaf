@@ -1,0 +1,16 @@
+{
+  "reporterEnabled": "mochawesome, @reportportal/agent-js-mocha",
+  "mochawesomeReporterOptions": {
+    "reportDir": "mochawesome-report",
+    "reportFilename": "mochawesome.html"
+  },
+  "reportportalAgentJsMochaReporterOptions": {
+    "endpoint": "https://reportportal.epam.com/api/v1",
+    "token": "c7bdd766-82fb-4930-b755-65df6024e0cd",
+    "launch": "marine_yegoryan_TEST_EXAMPLE",
+    "project": "marine_yegoryan_personal",
+    "description": "PROJECT_DESCRIPTION",
+    "attachScreenshots": true,
+    "showPassedHooks": true
+  }
+}
