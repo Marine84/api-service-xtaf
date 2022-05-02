@@ -16,12 +16,12 @@
     "axios-logger": "^2.6.0",
     "chai": "^4.3.6",
     "cross-env": "^7.0.3",
-    "husky": "^4.3.8",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.1",
     "mocha": "^9.2.2",
     "mocha-multi-reporters": "^1.5.1",
     "mochawesome": "^7.1.3",
     "mochawesome-report-generator": "^6.2.0",
-    "pretty-quick": "^3.1.3",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.3"
   },
@@ -30,7 +30,28 @@
     "app-root-path": "^3.0.0",
     "assert": "^2.0.0",
     "axios": "^0.27.2",
+    "commit-message-validator": "^1.0.2",
     "log4js": "^6.4.6",
     "prettier": "^2.6.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marine84/api-service-xtaf.git"
+  },
+  "homepage": "https://github.com/Marine84/api-service-xtaf#readme",
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "config": {
+    "commit-message-validator": {
+      "_comment": "commit message rule",
+      "pattern": "\\[[a-zA-Z]+[-]\\d+] ([a-zA-Z]+( [a-zA-Z]+)+)",
+      "errorMessage": "[POLICY] Your message is not formatted correctly! Ex. [EPAM-001] message"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commit-message-validator"
+    }
   }
 }

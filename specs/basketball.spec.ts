@@ -9,9 +9,6 @@ import { HTTP } from "../helpers/http";
 const log4js = require("log4js");
 const logger = log4js.getLogger();
 logger.level = "debug";
-const req = new HTTP();
-
-const url = "https://datausa.io/api/data?drilldowns=Nation&measures=Population";
 
 const configs = {
   url: "Population",
@@ -22,13 +19,15 @@ const configs = {
 };
 
 describe("Array", () => {
+  const http = new HTTP();
+
   it("double done", async () => {
     // logger.info("marine test");
     // PublicReportingAPI.log('INFO', "start");
     // PublicReportingAPI.debug('INFO', "start");
     // PublicReportingAPI.info('INFO', "start");
 
-    const response = await req.getReq(configs);
+    const response = await http.getReq(configs);
     // console.log("resp===", response)
     logger.debug(response.status);
 

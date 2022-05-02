@@ -9,23 +9,15 @@ const baseUrl: string =
   "https://datausa.io/api/data?drilldowns=Nation&measures=";
 
 axios.defaults.baseURL = baseUrl;
+import { id } from "./reporting";
 
 export class HTTP {
-  async getReq(configs: any) {
-    const response = await axios(configs);
-    PublicReportingAPI.log(
-      "INFO",
-      `${axios.defaults.baseURL + configs.url}\n ${JSON.stringify(
-        configs,
-        null,
-        2
-      )}`
-    );
-    PublicReportingAPI.log(
-      "INFO",
-      axios.defaults.baseURL + configs.url,
-      configs
-    );
+  @id
+  getReq(configs: any) {
+    const response = axios(configs);
+    // PublicReportingAPI.log("INFO",
+    //     `${axios.defaults.baseURL + configs.url}\n ${JSON.stringify(configs, null, 2)}`);
+    // PublicReportingAPI.log("INFO", axios.defaults.baseURL + configs.url, configs);
     logger.debug(axios.defaults.baseURL + configs.url, configs);
     return response;
   }
