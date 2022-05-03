@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "test1": "cross-env RPENABLED=true ts-node ./mocha-config.ts",
+    "runFile": "ts-node ./test.ts",
     "prepare": "husky install"
   },
   "author": "",
@@ -13,7 +13,6 @@
   "devDependencies": {
     "@types/chai": "^4.3.1",
     "@types/mocha": "^9.1.0",
-    "axios-logger": "^2.6.0",
     "chai": "^4.3.6",
     "cross-env": "^7.0.3",
     "husky": "^7.0.4",
@@ -39,14 +38,15 @@
     "url": "git+https://github.com/Marine84/api-service-xtaf.git"
   },
   "homepage": "https://github.com/Marine84/api-service-xtaf#readme",
+  "prettier": "./lint_config/.prettierrc.json",
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*": "prettier --write -u"
   },
   "config": {
     "commit-message-validator": {
       "_comment": "commit message rule",
-      "pattern": "\\[[a-zA-Z]+[-]\\d+] ([a-zA-Z]+( [a-zA-Z]+)+)",
-      "errorMessage": "[POLICY] Your message is not formatted correctly! Ex. [EPAM-001] message"
+      "pattern": "\\[[A-Z]+[-]\\d+] ([a-zA-Z]+( [a-zA-Z]+)+)",
+      "errorMessage": "[-------POLICY-------] Your message is not formatted correctly! \n Example: [EPAM-001] message"
     }
   },
   "husky": {
