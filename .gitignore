@@ -2,3 +2,4 @@
 /node_modules
 /testResult
 /mochawesome-report
+/package-lock.json

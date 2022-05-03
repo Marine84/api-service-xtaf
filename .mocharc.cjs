@@ -10,17 +10,10 @@ module.exports = {
   extension: ['js', 'cjs', 'mjs', 'ts'],
 
   require: 'ts-node/register',
-  // reporter: "mochawesome",
-  // reporterOptions:{
-  //     reportFilename: "poxos",
-  //     reportDir: "./"
-  // },
 
   reporter: 'mocha-multi-reporters',
   'reporter-options': 'configFile=report.config.json',
-  // 'report-options': {
-  //     reporterOption: "configFile=report.config.json"
-  // },
+
   package: './package.json',
 
   spec: ['specs/*.spec.ts'], // the positional arguments!

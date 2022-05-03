@@ -6,9 +6,9 @@
   },
   "reportportalAgentJsMochaReporterOptions": {
     "endpoint": "https://reportportal.epam.com/api/v1",
-    "token": "87d2f6c6-b88a-48ee-905d-9223c54c3e24",
-    "launch": "artur_sargsyan_TEST_EXAMPLE",
-    "project": "artur_sargsyan_personal",
+    "token": "2fe04baa-71e2-490b-8ec1-29d3aa4b042f",
+    "launch": "TEST_EXAMPLE",
+    "project": "marine_yegoryan_personal",
     "description": "PROJECT_DESCRIPTION",
     "attachScreenshots": true,
     "showPassedHooks": true

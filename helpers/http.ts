@@ -1,11 +1,9 @@
-import axios from 'axios'
+import axios, { AxiosRequestConfig } from 'axios'
 import { report } from './reporting'
 
 export class HTTP {
-  constructor() {}
-
-  @report
-  getReq(configs: any) {
-    return axios(configs)
+  @report()
+  getReq(url: string, configs: AxiosRequestConfig) {
+    return axios.get(url, configs)
   }
 }
